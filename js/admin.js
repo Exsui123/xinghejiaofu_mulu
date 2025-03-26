@@ -22,19 +22,42 @@ const ADMIN = {
     login: function(username, password) {
         if (username === this.credentials.username && password === this.credentials.password) {
             // 登录成功
-            this.setLoggedIn(true);
-            APP.closeLoginPanel();
-            APP.showSuccess('登录成功');
+            this.loginSuccess();
         } else {
             // 登录失败
             APP.showError('用户名或密码错误');
         }
     },
     
+    // 登录成功处理
+    loginSuccess: function() {
+        // 更新状态
+        APP.currentState.isAdmin = true;
+        
+        // 显示管理员按钮
+        document.querySelectorAll('.admin-only').forEach(element => {
+            element.classList.remove('hidden');
+        });
+        
+        // 关闭登录面板
+        APP.closeLoginPanel();
+        
+        // 重新渲染目录以显示管理员操作按钮
+        APP.renderCurrentDirectory();
+    },
+    
     // 登出功能
     logout: function() {
-        this.setLoggedIn(false);
-        APP.showSuccess('已退出登录');
+        // 更新状态
+        APP.currentState.isAdmin = false;
+        
+        // 隐藏管理员按钮
+        document.querySelectorAll('.admin-only').forEach(element => {
+            element.classList.add('hidden');
+        });
+        
+        // 重新渲染目录以隐藏管理员操作按钮
+        APP.renderCurrentDirectory();
     },
     
     // 设置登录状态

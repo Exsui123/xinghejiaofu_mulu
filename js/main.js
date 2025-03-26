@@ -269,7 +269,7 @@ const APP = {
         
         // 如果当前目录为空，显示提示信息
         if (!currentFolders || currentFolders.length === 0) {
-            this.elements.directoryContainer.innerHTML = '<div class="empty-directory">当前目录为空</div>';
+            this.elements.directoryContainer.innerHTML = '<div class="empty-directory">该目录仅展示【资料种类】，没有具体的文件内容</div>';
             return;
         }
         
