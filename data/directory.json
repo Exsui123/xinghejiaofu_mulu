@@ -1,0 +1,481 @@
+[
+  {
+    "id": "1",
+    "name": "小学教材",
+    "description": "小学各年级教材目录",
+    "children": [
+      {
+        "id": "1-1",
+        "name": "一年级",
+        "description": "一年级教材",
+        "children": [
+          {
+            "id": "1-1-1",
+            "name": "语文",
+            "description": "一年级语文教材",
+            "children": []
+          },
+          {
+            "id": "1-1-2",
+            "name": "数学",
+            "description": "一年级数学教材",
+            "children": []
+          },
+          {
+            "id": "1-1-3",
+            "name": "英语",
+            "description": "一年级英语教材",
+            "children": []
+          }
+        ]
+      },
+      {
+        "id": "1-2",
+        "name": "二年级",
+        "description": "二年级教材",
+        "children": [
+          {
+            "id": "1-2-1",
+            "name": "语文",
+            "description": "二年级语文教材",
+            "children": []
+          },
+          {
+            "id": "1-2-2",
+            "name": "数学",
+            "description": "二年级数学教材",
+            "children": []
+          },
+          {
+            "id": "1-2-3",
+            "name": "英语",
+            "description": "二年级英语教材",
+            "children": []
+          }
+        ]
+      },
+      {
+        "id": "1-3",
+        "name": "三年级",
+        "description": "三年级教材",
+        "children": [
+          {
+            "id": "1-3-1",
+            "name": "语文",
+            "description": "三年级语文教材",
+            "children": []
+          },
+          {
+            "id": "1-3-2",
+            "name": "数学",
+            "description": "三年级数学教材",
+            "children": []
+          },
+          {
+            "id": "1-3-3",
+            "name": "英语",
+            "description": "三年级英语教材",
+            "children": []
+          }
+        ]
+      },
+      {
+        "id": "1-4",
+        "name": "四年级",
+        "description": "四年级教材",
+        "children": [
+          {
+            "id": "1-4-1",
+            "name": "语文",
+            "description": "四年级语文教材",
+            "children": []
+          },
+          {
+            "id": "1-4-2",
+            "name": "数学",
+            "description": "四年级数学教材",
+            "children": []
+          },
+          {
+            "id": "1-4-3",
+            "name": "英语",
+            "description": "四年级英语教材",
+            "children": []
+          }
+        ]
+      },
+      {
+        "id": "1-5",
+        "name": "五年级",
+        "description": "五年级教材",
+        "children": [
+          {
+            "id": "1-5-1",
+            "name": "语文",
+            "description": "五年级语文教材",
+            "children": []
+          },
+          {
+            "id": "1-5-2",
+            "name": "数学",
+            "description": "五年级数学教材",
+            "children": []
+          },
+          {
+            "id": "1-5-3",
+            "name": "英语",
+            "description": "五年级英语教材",
+            "children": []
+          }
+        ]
+      },
+      {
+        "id": "1-6",
+        "name": "六年级",
+        "description": "六年级教材",
+        "children": [
+          {
+            "id": "1-6-1",
+            "name": "语文",
+            "description": "六年级语文教材",
+            "children": []
+          },
+          {
+            "id": "1-6-2",
+            "name": "数学",
+            "description": "六年级数学教材",
+            "children": []
+          },
+          {
+            "id": "1-6-3",
+            "name": "英语",
+            "description": "六年级英语教材",
+            "children": []
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "2",
+    "name": "初中教材",
+    "description": "初中各年级教材目录",
+    "children": [
+      {
+        "id": "2-1",
+        "name": "初一",
+        "description": "初一教材",
+        "children": [
+          {
+            "id": "2-1-1",
+            "name": "语文",
+            "description": "初一语文教材",
+            "children": []
+          },
+          {
+            "id": "2-1-2",
+            "name": "数学",
+            "description": "初一数学教材",
+            "children": []
+          },
+          {
+            "id": "2-1-3",
+            "name": "英语",
+            "description": "初一英语教材",
+            "children": []
+          },
+          {
+            "id": "2-1-4",
+            "name": "物理",
+            "description": "初一物理教材",
+            "children": []
+          },
+          {
+            "id": "2-1-5",
+            "name": "化学",
+            "description": "初一化学教材",
+            "children": []
+          },
+          {
+            "id": "2-1-6",
+            "name": "生物",
+            "description": "初一生物教材",
+            "children": []
+          }
+        ]
+      },
+      {
+        "id": "2-2",
+        "name": "初二",
+        "description": "初二教材",
+        "children": [
+          {
+            "id": "2-2-1",
+            "name": "语文",
+            "description": "初二语文教材",
+            "children": []
+          },
+          {
+            "id": "2-2-2",
+            "name": "数学",
+            "description": "初二数学教材",
+            "children": []
+          },
+          {
+            "id": "2-2-3",
+            "name": "英语",
+            "description": "初二英语教材",
+            "children": []
+          },
+          {
+            "id": "2-2-4",
+            "name": "物理",
+            "description": "初二物理教材",
+            "children": []
+          },
+          {
+            "id": "2-2-5",
+            "name": "化学",
+            "description": "初二化学教材",
+            "children": []
+          },
+          {
+            "id": "2-2-6",
+            "name": "生物",
+            "description": "初二生物教材",
+            "children": []
+          }
+        ]
+      },
+      {
+        "id": "2-3",
+        "name": "初三",
+        "description": "初三教材",
+        "children": [
+          {
+            "id": "2-3-1",
+            "name": "语文",
+            "description": "初三语文教材",
+            "children": []
+          },
+          {
+            "id": "2-3-2",
+            "name": "数学",
+            "description": "初三数学教材",
+            "children": []
+          },
+          {
+            "id": "2-3-3",
+            "name": "英语",
+            "description": "初三英语教材",
+            "children": []
+          },
+          {
+            "id": "2-3-4",
+            "name": "物理",
+            "description": "初三物理教材",
+            "children": []
+          },
+          {
+            "id": "2-3-5",
+            "name": "化学",
+            "description": "初三化学教材",
+            "children": []
+          },
+          {
+            "id": "2-3-6",
+            "name": "生物",
+            "description": "初三生物教材",
+            "children": []
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "3",
+    "name": "高中教材",
+    "description": "高中各年级教材目录",
+    "children": [
+      {
+        "id": "3-1",
+        "name": "高一",
+        "description": "高一教材",
+        "children": [
+          {
+            "id": "3-1-1",
+            "name": "语文",
+            "description": "高一语文教材",
+            "children": []
+          },
+          {
+            "id": "3-1-2",
+            "name": "数学",
+            "description": "高一数学教材",
+            "children": []
+          },
+          {
+            "id": "3-1-3",
+            "name": "英语",
+            "description": "高一英语教材",
+            "children": []
+          },
+          {
+            "id": "3-1-4",
+            "name": "物理",
+            "description": "高一物理教材",
+            "children": []
+          },
+          {
+            "id": "3-1-5",
+            "name": "化学",
+            "description": "高一化学教材",
+            "children": []
+          },
+          {
+            "id": "3-1-6",
+            "name": "生物",
+            "description": "高一生物教材",
+            "children": []
+          }
+        ]
+      },
+      {
+        "id": "3-2",
+        "name": "高二",
+        "description": "高二教材",
+        "children": [
+          {
+            "id": "3-2-1",
+            "name": "语文",
+            "description": "高二语文教材",
+            "children": []
+          },
+          {
+            "id": "3-2-2",
+            "name": "数学",
+            "description": "高二数学教材",
+            "children": []
+          },
+          {
+            "id": "3-2-3",
+            "name": "英语",
+            "description": "高二英语教材",
+            "children": []
+          },
+          {
+            "id": "3-2-4",
+            "name": "物理",
+            "description": "高二物理教材",
+            "children": []
+          },
+          {
+            "id": "3-2-5",
+            "name": "化学",
+            "description": "高二化学教材",
+            "children": []
+          },
+          {
+            "id": "3-2-6",
+            "name": "生物",
+            "description": "高二生物教材",
+            "children": []
+          }
+        ]
+      },
+      {
+        "id": "3-3",
+        "name": "高三",
+        "description": "高三教材",
+        "children": [
+          {
+            "id": "3-3-1",
+            "name": "语文",
+            "description": "高三语文教材",
+            "children": []
+          },
+          {
+            "id": "3-3-2",
+            "name": "数学",
+            "description": "高三数学教材",
+            "children": []
+          },
+          {
+            "id": "3-3-3",
+            "name": "英语",
+            "description": "高三英语教材",
+            "children": []
+          },
+          {
+            "id": "3-3-4",
+            "name": "物理",
+            "description": "高三物理教材",
+            "children": []
+          },
+          {
+            "id": "3-3-5",
+            "name": "化学",
+            "description": "高三化学教材",
+            "children": []
+          },
+          {
+            "id": "3-3-6",
+            "name": "生物",
+            "description": "高三生物教材",
+            "children": []
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "4",
+    "name": "辅导资料",
+    "description": "各类辅导资料",
+    "children": [
+      {
+        "id": "4-1",
+        "name": "小学辅导",
+        "description": "小学辅导资料",
+        "children": []
+      },
+      {
+        "id": "4-2",
+        "name": "初中辅导",
+        "description": "初中辅导资料",
+        "children": []
+      },
+      {
+        "id": "4-3",
+        "name": "高中辅导",
+        "description": "高中辅导资料",
+        "children": []
+      }
+    ]
+  },
+  {
+    "id": "5",
+    "name": "考试资料",
+    "description": "各类考试资料",
+    "children": [
+      {
+        "id": "5-1",
+        "name": "小升初",
+        "description": "小升初考试资料",
+        "children": []
+      },
+      {
+        "id": "5-2",
+        "name": "中考",
+        "description": "中考考试资料",
+        "children": []
+      },
+      {
+        "id": "5-3",
+        "name": "高考",
+        "description": "高考考试资料",
+        "children": []
+      }
+    ]
+  }
+] 

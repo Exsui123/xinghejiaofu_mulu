@@ -1,0 +1,431 @@
+/* 基础样式重置 */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Microsoft YaHei', 'Segoe UI', sans-serif;
+    background-color: #f5f7fa;
+    color: #333;
+    line-height: 1.6;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+a {
+    text-decoration: none;
+    color: #1e88e5;
+}
+
+ul {
+    list-style: none;
+}
+
+/* 顶部标题栏样式 */
+.header {
+    background: linear-gradient(135deg, #1976d2, #2196f3);
+    color: white;
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.logo i {
+    font-size: 1.5rem;
+}
+
+.logo h1 {
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+.admin-controls {
+    display: flex;
+    gap: 0.5rem;
+}
+
+/* 按钮样式 */
+.btn {
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    border: none;
+    cursor: pointer;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    transition: all 0.2s;
+}
+
+.btn i {
+    font-size: 0.9rem;
+}
+
+.export-btn {
+    background-color: #2ecc71;
+    color: white;
+}
+
+.export-btn:hover {
+    background-color: #27ae60;
+}
+
+.import-btn {
+    background-color: #3498db;
+    color: white;
+}
+
+.import-btn:hover {
+    background-color: #2980b9;
+}
+
+.add-btn {
+    background-color: #e74c3c;
+    color: white;
+}
+
+.add-btn:hover {
+    background-color: #c0392b;
+}
+
+.logout-btn {
+    background-color: #7f8c8d;
+    color: white;
+}
+
+.logout-btn:hover {
+    background-color: #636e72;
+}
+
+.submit-btn {
+    background-color: #1e88e5;
+    color: white;
+}
+
+.submit-btn:hover {
+    background-color: #1565c0;
+}
+
+.delete-btn {
+    background-color: #e74c3c;
+    color: white;
+}
+
+.delete-btn:hover {
+    background-color: #c0392b;
+}
+
+.cancel-btn {
+    background-color: #95a5a6;
+    color: white;
+}
+
+.cancel-btn:hover {
+    background-color: #7f8c8d;
+}
+
+/* 导航栏样式 */
+.breadcrumb {
+    background-color: white;
+    padding: 0.5rem 2rem;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.breadcrumb ul {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.breadcrumb li {
+    display: flex;
+    align-items: center;
+}
+
+.breadcrumb li:not(:last-child)::after {
+    content: '/';
+    margin: 0 0.5rem;
+    color: #bdc3c7;
+}
+
+.breadcrumb a {
+    color: #7f8c8d;
+    transition: color 0.2s;
+}
+
+.breadcrumb a:hover {
+    color: #2980b9;
+}
+
+.breadcrumb li:last-child a {
+    color: #2c3e50;
+    font-weight: 500;
+}
+
+/* 内容区样式 */
+.content {
+    max-width: 1200px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 2rem;
+    flex: 1;
+}
+
+.current-path {
+    margin-bottom: 1.5rem;
+}
+
+.current-path h2 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #2c3e50;
+}
+
+/* 目录容器样式 - 竖排文件夹列表 */
+.directory-container {
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+}
+
+/* 文件夹样式 */
+.folder {
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+    padding: 1rem;
+    cursor: pointer;
+    position: relative;
+    transition: transform 0.2s, box-shadow 0.2s;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+}
+
+.folder:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.folder-icon {
+    color: #f39c12;
+    font-size: 2rem;
+    margin-right: 1rem;
+    flex-shrink: 0;
+}
+
+.folder-content {
+    flex: 1;
+}
+
+.folder-name {
+    font-weight: 600;
+    margin-bottom: 0.3rem;
+    color: #34495e;
+}
+
+.folder-description {
+    font-size: 0.9rem;
+    color: #7f8c8d;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+/* 管理员操作按钮 */
+.folder-actions {
+    display: flex;
+    gap: 0.5rem;
+    margin-left: auto;
+    opacity: 0;
+    transition: opacity 0.2s;
+}
+
+.folder:hover .folder-actions {
+    opacity: 1;
+}
+
+.action-btn {
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    border: none;
+    cursor: pointer;
+    background-color: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(5px);
+    transition: background-color 0.2s;
+}
+
+.edit-btn {
+    color: #3498db;
+}
+
+.edit-btn:hover {
+    background-color: rgba(52, 152, 219, 0.1);
+}
+
+.delete-folder-btn {
+    color: #e74c3c;
+}
+
+.delete-folder-btn:hover {
+    background-color: rgba(231, 76, 60, 0.1);
+}
+
+/* 底部信息栏样式 */
+.footer {
+    background-color: #34495e;
+    color: #ecf0f1;
+    text-align: center;
+    padding: 1rem;
+    font-size: 0.9rem;
+    margin-top: auto;
+}
+
+/* 模态框样式 */
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+}
+
+.modal-content {
+    background-color: white;
+    border-radius: 8px;
+    width: 100%;
+    max-width: 500px;
+    box-shadow: 0 5px 25px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+}
+
+.modal-header {
+    background-color: #2196f3;
+    color: white;
+    padding: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.modal-header h3 {
+    font-weight: 600;
+    font-size: 1.2rem;
+}
+
+.close-btn {
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: white;
+    transition: color 0.2s;
+}
+
+.close-btn:hover {
+    color: #e0e0e0;
+}
+
+.modal-body {
+    padding: 1.5rem;
+}
+
+/* 表单样式 */
+.form-group {
+    margin-bottom: 1.2rem;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+    color: #34495e;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 0.7rem;
+    border: 1px solid #dcdfe6;
+    border-radius: 4px;
+    font-size: 1rem;
+    transition: border-color 0.2s;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    border-color: #1e88e5;
+    outline: none;
+}
+
+.form-actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 0.7rem;
+    margin-top: 1.5rem;
+}
+
+.help-text {
+    font-size: 0.85rem;
+    color: #7f8c8d;
+    margin-top: 0.3rem;
+}
+
+/* 空目录提示 */
+.empty-directory {
+    text-align: center;
+    padding: 2rem;
+    color: #7f8c8d;
+    font-style: italic;
+}
+
+/* 工具类 */
+.hidden {
+    display: none !important;
+}
+
+/* 动画效果 */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.fade-in {
+    animation: fadeIn 0.3s ease-in-out;
+}
+
+/* 提示信息栏样式 */
+.notice-bar {
+    background-color: #f8f9fa;
+    border-bottom: 1px solid #e9ecef;
+    padding: 8px 2rem;
+    color: #6c757d;
+    font-size: 0.9rem;
+}
+
+.notice-bar p {
+    margin: 0;
+} 

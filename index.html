@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>星河教辅目录展示系统</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+    <!-- 顶部标题栏 -->
+    <header class="header">
+        <div class="logo">
+            <i class="fas fa-book-open"></i>
+            <h1>星河教辅目录展示系统</h1>
+        </div>
+        <div class="admin-controls">
+            <button id="exportBtn" class="btn export-btn"><i class="fas fa-download"></i> 导出目录</button>
+            <button id="importBtn" class="btn import-btn admin-only hidden"><i class="fas fa-upload"></i> 批量添加</button>
+            <button id="addFolderBtn" class="btn add-btn admin-only hidden"><i class="fas fa-folder-plus"></i> 添加目录</button>
+            <button id="logoutBtn" class="btn logout-btn admin-only hidden"><i class="fas fa-sign-out-alt"></i> 退出</button>
+        </div>
+    </header>
+
+    <!-- 提示信息 -->
+    <div class="notice-bar">
+        <p>该目录仅展示【资料种类】，无法看到具体的文件内容</p>
+    </div>
+
+    <!-- 导航栏 -->
+    <nav class="breadcrumb">
+        <ul id="breadcrumbList">
+            <li><a href="javascript:void(0)" onclick="APP.goToRoot()" data-path="root"><i class="fas fa-home"></i> 首页</a></li>
+        </ul>
+    </nav>
+
+    <!-- 内容区 -->
+    <main class="content">
+        <!-- 当前路径信息 -->
+        <div class="current-path">
+            <h2 id="currentPathTitle">根目录</h2>
+        </div>
+
+        <!-- 目录内容 -->
+        <div class="directory-container" id="directoryContainer">
+            <!-- 目录项将通过JavaScript动态生成 -->
+        </div>
+    </main>
+
+    <!-- 底部信息栏 -->
+    <footer class="footer">
+        <p>© 2025 星河教辅目录展示系统 | 技术支持：星河教育 | 微信：xiaot2188</p>
+    </footer>
+
+    <!-- 登录面板 -->
+    <div id="loginPanel" class="modal hidden">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>管理员登录</h3>
+                <span class="close-btn" id="closeLoginBtn">&times;</span>
+            </div>
+            <div class="modal-body">
+                <form id="loginForm">
+                    <div class="form-group">
+                        <label for="username">用户名</label>
+                        <input type="text" id="username" name="username" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="password">密码</label>
+                        <input type="password" id="password" name="password" required>
+                    </div>
+                    <div class="form-actions">
+                        <button type="submit" class="btn submit-btn">登录</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- 添加/编辑目录面板 -->
+    <div id="folderModal" class="modal hidden">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3 id="folderModalTitle">添加目录</h3>
+                <span class="close-btn" id="closeFolderBtn">&times;</span>
+            </div>
+            <div class="modal-body">
+                <form id="folderForm">
+                    <input type="hidden" id="folderId">
+                    <input type="hidden" id="folderParentPath">
+                    <div class="form-group">
+                        <label for="folderName">目录名称</label>
+                        <input type="text" id="folderName" name="folderName" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="folderDescription">描述（可选）</label>
+                        <textarea id="folderDescription" name="folderDescription"></textarea>
+                    </div>
+                    <div class="form-actions">
+                        <button type="submit" class="btn submit-btn">保存</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- 批量导入面板 -->
+    <div id="importModal" class="modal hidden">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>批量导入目录</h3>
+                <span class="close-btn" id="closeImportBtn">&times;</span>
+            </div>
+            <div class="modal-body">
+                <form id="importForm">
+                    <div class="form-group">
+                        <label for="importData">输入目录名称，每行一个</label>
+                        <textarea id="importData" name="importData" rows="10" required></textarea>
+                    </div>
+                    <div class="form-group">
+                        <p class="help-text">示例: 一年级<br>二年级<br>三年级</p>
+                    </div>
+                    <div class="form-actions">
+                        <button type="submit" class="btn submit-btn">导入</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- 确认删除对话框 -->
+    <div id="confirmDeleteModal" class="modal hidden">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>确认删除</h3>
+                <span class="close-btn" id="closeConfirmBtn">&times;</span>
+            </div>
+            <div class="modal-body">
+                <p>确定要删除此目录吗？此操作将会删除该目录及其所有子目录，且不可恢复。</p>
+                <div class="form-actions">
+                    <button id="confirmDeleteBtn" class="btn delete-btn">确认删除</button>
+                    <button id="cancelDeleteBtn" class="btn cancel-btn">取消</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- JavaScript文件 -->
+    <script src="https://kit.fontawesome.com/your-font-awesome-kit.js"></script>
+    <script src="data/directory-data.js"></script>
+    <script src="js/directory.js"></script>
+    <script src="js/admin.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html> 
